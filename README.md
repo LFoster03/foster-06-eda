@@ -45,18 +45,25 @@ Create many plots and graphs to visualize the data in various ways:
 
 ## Initial Data Transformation and Feature Engineering
 - Rename the species by: 
-Load the penguins dataset:
-`penguins = sns.load_dataset('penguins')`
-Rename the "species" column to "penguin_species":
-`penguins.rename(columns={'species': 'penguin_species'}, inplace=True)`
-Display the first few rows to verify the change:
-`print(penguins.head())`
+
+    - Load the penguins dataset:
+    `penguins = sns.load_dataset('penguins')`
+
+    - Rename the "species" column to "penguin_species":
+    `penguins.rename(columns={'species': 'penguin_species'}, inplace=True)`
+
+    - Display the first few rows to verify the change:
+    `print(penguins.head())`
+
 - Create a new column. The new column "size_category" is added based on the body_mass_g. Penguins with body mass below 3500 grams are categorized as "Small", those with body mass between 3500 and 5000 grams are "Medium", and those with body mass above 5000 grams are categorized as "Large".
-Load the penguins dataset:
-`penguins = sns.load_dataset('penguins')`
-Check if the dataset loaded properly and contains the 'body_mass_g' column:
-`print(penguins.columns)`
-Define the function to categorize body mass:
+
+    - Load the penguins dataset:
+    `penguins = sns.load_dataset('penguins')`
+
+    - Check if the dataset loaded properly and contains the 'body_mass_g' column:
+    `print(penguins.columns)`
+
+    - Define the function to categorize body mass:
 `def categorize_size(row):
     if row['body_mass_g'] < 3500:
         return 'Small'
@@ -64,9 +71,11 @@ Define the function to categorize body mass:
         return 'Medium'
     else:
         return 'Large'`
-Apply the function across rows to create a new column "size_category":
-`penguins['size_category'] = penguins.apply(categorize_size, axis=1)`
-Display the first few rows to verify the new column:
-`print(penguins[['species', 'body_mass_g', 'size_category']].head())`
+
+    - Apply the function across rows to create a new column "size_category":
+    `penguins['size_category'] = penguins.apply(categorize_size, axis=1)`
+
+    - Display the first few rows to verify the new column:
+    `print(penguins[['species', 'body_mass_g', 'size_category']].head())`
 
 
