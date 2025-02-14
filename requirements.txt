@@ -1,5 +1,5 @@
 jupyterlab
 pandas
 pyarrow
-matplotlib
+matplotlibspo
 seaborn
