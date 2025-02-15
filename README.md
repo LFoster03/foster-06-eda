@@ -3,6 +3,8 @@
 ## Penguins Dataset
 ### Purpose: Perform and publish a custom EDA project to demonstrate skills with Jupyter, pandas, Seaborn and popular tools for data analytics using the seaborn penguins dataset.
 Dataset [here](https://github.com/mwaskom/seaborn-data/blob/master/penguins.csv)
+Author: Lindsay Foster
+Date: February 2025
 
 ## Install and Run
 - Create a GitHub project repository with a default README.md. 
